@@ -11,6 +11,7 @@ def complete_URL(hrefValue, parent):
 
 print('Enter the URL you wish to check for dead links:')
 checksite = input()
+print('Checking...')
 
 # Get URL contents and collect all links.
 ro = requests.get(checksite)
@@ -33,6 +34,7 @@ for match in matchList:
         deadlinks.append(link)
 
 # Print out the list if non-empty.
+print('Check complete.')
 if deadlinks == []:
     print('No dead links found in this page.')
 else:
